@@ -97,8 +97,8 @@ export const theme = createTheme({
       },
     }),
 
-    // Button: Button.extend({
-    //   classNames: { root: classes.button },
-    // }),
+    Button: Button.extend({
+      classNames: { root: classes.button },
+    }),
   },
 });
