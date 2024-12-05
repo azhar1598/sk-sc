@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer mantine, mantine-datatable;
 
 :root {
-  --background: #ffffff;
+  --background: ##e5e7eb;
   --foreground: #171717;
 }
 
@@ -16,6 +17,45 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #f4f7fe !important;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+  margin-left: calc(220px + 0rem);
+  margin-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* padding: 100px; */
+}
+
+.header {
+  margin-left: calc(220px + 0rem);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  /* background-color: #1e476b; */
+  /* background-color: #14141fd9; */
+}
+.page-main-wrapper,
+.data-table {
+  width: calc(100vw - 280px) !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .main-content {
+    margin-left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding: 10px; */
+  }
+  .header {
+    margin-left: 0px;
+    /* background: #000; */
+  }
+  .data-table,
+  .page-main-wrapper {
+    width: calc(100vw - 20px) !important;
+  }
 }
